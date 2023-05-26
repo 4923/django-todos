@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ form }}
+  <button>생성</button>
+</form>
+<hr>
+
+{% for todo in todos %}
+  <h2>{{ todo.title }}</h2>
+  <p>작성자: {{ todo.author }}</p>
+  <p>완료여부: {{ todo.completed }}</p>
+
+  {% if todo.completed == False %}
+  <form action="{% url 'todos:complete' todo.id %}" method="POST">
+    {% csrf_token %}
+    <button>완료</button>
+  </form>
+  <hr>
+  {% endif %}
+
+{% endfor %}
+
+{% endblock %}
