@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
 
+<hr>
+
 {% block body %}
 <form action="" method="POST">
   {% csrf_token %}
-  {{ form }}
+  제목: {{ form.title }}<br>
+  상세: {{ form.body }}
   <button>생성</button>
 </form>
 <hr>
 
 {% for todo in todos %}
   <h2>{{ todo.title }}</h2>
+  <p>상세: {{ todo.body }}</p>
   <p>작성자: {{ todo.author }}</p>
   <p>완료여부: {{ todo.completed }}</p>
 

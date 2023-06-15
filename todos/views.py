@@ -4,7 +4,7 @@ from .models import Todo
 from .forms import TodoForm
 
 # Create your views here.
-@login_required 
+# @login_required 
 def index(request):
     completed = request.GET.get('completed') or False
     todos = Todo.objects.filter(completed=completed)

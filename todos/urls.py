@@ -1,5 +1,6 @@
+from django.contrib import admin
 from django.urls import path 
-from . import views 
+from todos import views 
 
 app_name = 'todos'
 urlpatterns = [
@@ -7,3 +8,4 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('<int:pk>/complete/', views.complete, name='complete'),
 ]
+
