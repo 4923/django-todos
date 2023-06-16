@@ -1,5 +1,7 @@
 ## Django 101
 
+[Guide](https://github.com/4923/ps-django/issues/1)
+
 |<img width="1912" alt="image" src="https://github.com/4923/django-todos/assets/60145951/c19f2163-0aa4-4102-9bb5-d2b24972edaa">|<img width="1912" alt="image" src="https://github.com/4923/django-todos/assets/60145951/7b056da4-03a1-4892-a9e0-57540a6de0b9">|
 |:-:|:-:|
 |메인화면|할 일 생성|
